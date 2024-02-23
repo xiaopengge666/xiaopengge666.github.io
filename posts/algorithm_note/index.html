@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en-us"><head>
+    <title>SmartinYan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+
+    
+</head>
+<body>
+        <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1">
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/157.jpeg"
+                        
+                    
+                />
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        SmartinYan
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    Software Engineering | Chengdu, Sichuan
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../about/" title="About">About</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../posts/" title="Posts">Posts</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../contact/" title="Contact">Contact</a>
+                    </li>
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="http://github.com/xiaopengge666" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="mailto:xyyan126@163.com" target="_blank">
+                            <i class="fas fa-at fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1413830249&amp;site=qq&amp;menu=yes" target="_blank">
+                            <i class="fab fa-qq fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr />
+</header>
+<div class="container">
+    <div class="pl-sm-4 ml-sm-5">
+        <h1 id="冒泡排序bubble-sort">冒泡排序（Bubble Sort）</h1>
+<p>冒泡排序的本质在于==交换==，即每次通过交换的方式把当前剩余元素的最大值移动到一端，而当剩余元素减少为0时，排序结束。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> a[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">4</span>; i<span style="color:#f92672">++</span>) <span style="color:#75715e">// 进行n-1趟
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 从第i趟时从a[0]到a[n-i-1]都与它们下一个数比较
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">-</span> i; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (a[j] <span style="color:#f92672">&gt;</span> a[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]) <span style="color:#75715e">// 如果左边的数更大，则交换a[j]和a[j+1]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> Temp <span style="color:#f92672">=</span> a[j];
+</span></span><span style="display:flex;"><span>                a[j] <span style="color:#f92672">=</span> a[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>                a[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> Temp;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        cout <span style="color:#f92672">&lt;&lt;</span> a[i];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="阶乘">阶乘</h1>
+<p>重点在于函数的==递归==调用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">F</span>(<span style="color:#66d9ef">int</span> n)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> F(n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> n;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n;
+</span></span><span style="display:flex;"><span>    cin <span style="color:#f92672">&gt;&gt;</span> n;
+</span></span><span style="display:flex;"><span>    cout <span style="color:#f92672">&lt;&lt;</span> F(n) <span style="color:#f92672">&lt;&lt;</span> endl;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="害死人不偿命的3n1猜想">害死人不偿命的（3n+1）猜想</h1>
+<p><em>对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把（3n+1）砍掉一半，这样一直反复砍下去，最后一定在某一步得到n=1</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e"># include&lt;cstdio&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> n,step <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	scanf(<span style="color:#e6db74">&#34;%d&#34;</span>,<span style="color:#f92672">&amp;</span>n);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>(n <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span>){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(n<span style="color:#f92672">%</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>			n <span style="color:#f92672">=</span> n <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>			n <span style="color:#f92672">=</span> (<span style="color:#ae81ff">3</span><span style="color:#f92672">*</span>n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>		step<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,step);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="挖掘技术哪家强">挖掘技术哪家强</h1>
+<p><em>在第1行给出不超过e5的正整数n，即参赛人数，随后n行，每行给出以为参赛者的信息和成绩，包括其所代表的学校的编号及其比赛成绩（百分制），在最后一行给出总得分最高的学校的编号及其总分。</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e"># include&lt;cstdio&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> maxn <span style="color:#f92672">=</span> <span style="color:#ae81ff">100010</span>; <span style="color:#75715e">// 参赛人数n不超过e5的正整数 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> school[maxn] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> n,schID,score;
+</span></span><span style="display:flex;"><span>	scanf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,<span style="color:#f92672">&amp;</span>n); <span style="color:#75715e">// 记录参赛人数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>		scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>,<span style="color:#f92672">&amp;</span>schID,<span style="color:#f92672">&amp;</span>score);  <span style="color:#75715e">//学校ID，分数 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		 school[schID]<span style="color:#f92672">+=</span>score; <span style="color:#75715e">// 学校schID的总分增加score 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	} 
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> k<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,Max<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 最高得分的学校ID以及其总分 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;i<span style="color:#f92672">&lt;=</span>n;i<span style="color:#f92672">++</span>){ <span style="color:#75715e">// 从所有学校中选出总分最高的一个 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span>(school[i]<span style="color:#f92672">&gt;</span>Max){
+</span></span><span style="display:flex;"><span>			Max <span style="color:#f92672">=</span> school[i];
+</span></span><span style="display:flex;"><span>			k <span style="color:#f92672">=</span> i;	
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	printf(<span style="color:#e6db74">&#34;%d %d&#34;</span>,k,Max); <span style="color:#75715e">//输出最高总分的学校ID及其总分 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="找x">找x</h1>
+<p><em>输入一个数n（1&lt;=n&lt;=200），然后输入n个数值各不相同的数，再输入一个值x，输出这个值在这个数组中的下标（从0开始，若不在数组中则输出-1）</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e"># include&lt;cstdio&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> maxn <span style="color:#f92672">=</span> <span style="color:#ae81ff">210</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a[maxn];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(){
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> n,x;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>(scanf(<span style="color:#e6db74">&#34;%d&#34;</span>,<span style="color:#f92672">&amp;</span>n)<span style="color:#f92672">!=</span>EOF){
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;i<span style="color:#f92672">&lt;</span>n;i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>			scanf(<span style="color:#e6db74">&#34;%d&#34;</span>,<span style="color:#f92672">&amp;</span>a[i]);
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		scanf(<span style="color:#e6db74">&#34;%d&#34;</span>,<span style="color:#f92672">&amp;</span>x);<span style="color:#75715e">//输入欲查询的数 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">int</span> k; <span style="color:#75715e">//下标
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">for</span>(k<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;k<span style="color:#f92672">&lt;</span>n;k<span style="color:#f92672">++</span>){ <span style="color:#75715e">//遍历数组 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#66d9ef">if</span>(a[k]<span style="color:#f92672">==</span>x){
+</span></span><span style="display:flex;"><span>				printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>,k);
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(k<span style="color:#f92672">==</span>n){
+</span></span><span style="display:flex;"><span>			printf(<span style="color:#e6db74">&#34;-1</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>; 
+</span></span><span style="display:flex;"><span>} 
+</span></span></code></pre></div>
+    </div>
+
+    
+
+            </div>
+        </div><footer class="text-center pb-1">
+    <small class="text-muted">
+        
+            &copy; Copyright 2024, SmartinYan
+        
+        <br>
+        Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a>
+        and <a href="https://github.com/austingebauer/devise" target="_blank">Devise</a>
+    </small>
+</footer>
+</body>
+</html>
