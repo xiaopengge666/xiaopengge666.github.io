@@ -7,14 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2024, SmartinYan</copyright>
-    <lastBuildDate>Fri, 23 Feb 2024 13:15:51 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Feb 2024 14:22:22 +0800</lastBuildDate>
     <atom:link href="https://xiaopengge666.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://xiaopengge666.github.io/contact/</link>
+      <pubDate>Fri, 23 Feb 2024 14:22:22 +0800</pubDate>
+      <guid>https://xiaopengge666.github.io/contact/</guid>
+      <description>You can reach me by email at xyyan126@163.com.</description>
+    </item>
     <item>
       <title>About</title>
       <link>https://xiaopengge666.github.io/about/</link>
       <pubDate>Fri, 23 Feb 2024 13:15:51 +0800</pubDate>
       <guid>https://xiaopengge666.github.io/about/</guid>
-      <description>I am a college student majoring in software engineering, and my undergraduate school is Southwest University of Science and Technology.</description>
+      <description>Hello！I‘m SmartinYan.I live in Chengdu SiChuan.&#xA;I am a software engineering student at Southwest University of Science and Technology.</description>
     </item>
     <item>
       <title>Python_self Study_notes</title>
