@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2024, SmartinYan</copyright>
-    <lastBuildDate>Fri, 23 Feb 2024 12:37:16 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Feb 2024 13:09:26 +0800</lastBuildDate>
     <atom:link href="https://xiaopengge666.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python_self Study_notes</title>
+      <link>https://xiaopengge666.github.io/posts/python_self-study_notes/</link>
+      <pubDate>Fri, 23 Feb 2024 13:09:26 +0800</pubDate>
+      <guid>https://xiaopengge666.github.io/posts/python_self-study_notes/</guid>
+      <description>Python基础语法 1.字面量 字面量：在代码中，==被写下来的==的 ==固定的值== ，称之为字面量&#xA;Python中常用的有==6==种（数据）的类型&#xA;类型 描述 说明 数字（Number） 1.整数（int）2.浮点数（float）3.复数（complex）4.布尔（bool） 1.==整数（int）==，如10，-102.==浮点数（float）==，如13.14，-13.143.复数（complex），如：4+3j，以j结尾表示复数4.布尔（bool）表达现实生活中的逻辑，即真和假，True表示真，False表示假。True本质上是一个数字记作1，False记作0 字符串（String） 描述文本的一种数据类型 ==字符串（String）==由任意数量的字符组成 列表（List） 有序的可变序列 Python中使用最频繁的数据类型，可有序记录一堆数据 元组（Tuple） 有序的不可变序列 可有序记录一堆不可变的Python数据集合 集合（Set） 无序不重复集合 可无序记录一堆不重复的Python数据集合 字典（Dictionary） 无序Key-Value集合 可无序记录一堆Key-Value型的Python数据集合 2.注释 3.变量 变量：==在程序运行时==，能==储存==计算结果或能==表示值==的抽象概念&#xA;变量的特征&#xA;变量，从名字中可以看出，表示&amp;quot;量&amp;quot;是可变的。&#xA;所以，变量的特征就是，==变量存储的数据，是可以发生改变的。==&#xA;4.数据类型 如何验证数据的类型：type(被查看类型的数据)&#xA;5.数据类型转换 语句（函数） 说明 int(x) 将x转换为一个整数 float(x) 将x转换为一个浮点数 str(x) 将对象x转换为字符串 类型转换注意事项：&#xA;==1.任何类型，都可以通过str()，转换成字符串==&#xA;==2.字符串内必须真的是数字，才可以将字符串转换为数字==&#xA;==3.字符串内不是数字，是无法完成到数字的转换的==&#xA;6.标识符 7.运算符 算术（数学）运算符&#xA;运算符 描述 实例 ==+== 加 两个对象相加a+b ==-== 减 两个对象相减a-b ==*== 乘 两个数相乘或是返回一个被重复若干次的字符串a*b ==/== 除 b/a // 取整除 返回商的整数部分9//2输出结果4，9.0//2.0输出结果4.0 % 取余 返回除法的余数b%a ** 指数 a**b为10的2次方，输出结果100 赋值运算符</description>
+    </item>
     <item>
       <title>Thrist</title>
       <link>https://xiaopengge666.github.io/posts/thrist/</link>
